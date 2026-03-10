@@ -18,14 +18,14 @@
 using namespace std;
 
 // Global memory management counts to track allocations/deallocations
-int AN = 0;
-int DN = 0;
+int AN = 0; //allocations
+int DN = 0; // deallocations
 
 // A Generic Node Class
 template <typename T> class Node{
   private:
-    T element;
-    Node <T>* next;
+    T element; // the data element in the node (type t could be any type)
+    Node <T>* next; // pointer to the next node in the list (NULL if this is the last node)
 
     // Allow the friend class List to access private members
     template <typename U> friend class List;
